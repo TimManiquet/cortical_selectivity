@@ -1,0 +1,4 @@
+.DS_Store
+split_large_npy_files.py
+split_large_pkl_files.py
+__pycache__/
