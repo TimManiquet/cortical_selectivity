@@ -68,12 +68,8 @@ rt_means = (
     .groupby(['image', 'target', 'accuracy', 'category'], as_index=False)
     .agg(rt=('reaction_time', 'mean'))
 )
-# acc_rt_means = rt_means[rt_means['accuracy']==1]
-acc_rt_means = rt_means = (
-    basic_rt_df
-    .groupby(['image', 'target', 'category'], as_index=False)
-    .agg(rt=('reaction_time', 'mean'))
-)
+# Select only accurate trials
+acc_rt_means = rt_means[rt_means['accuracy']==1]
 
 ## Figure 2a: RT distributions across tasks
 
